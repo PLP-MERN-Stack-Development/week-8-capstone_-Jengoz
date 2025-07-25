@@ -1,198 +1,171 @@
+# 🛍️ JengoMart E-commerce Platform
 
-🛍️ JengoMart E-commerce Platform
 JengoMart is a modern, full-stack e-commerce application designed to provide a seamless shopping experience. It features a robust product catalog, an intuitive shopping cart, user authentication, and a visually appealing interface.
 
-✨ Features
-Product Catalog: Browse a wide range of products with detailed listings.
+## ✨ Features
 
-Product Details Page: View comprehensive product information, including an interactive image gallery.
+* **Product Catalog:** Browse a wide range of products with detailed listings.
 
-Dynamic Image Gallery: Clickable thumbnails to switch the main product image.
+* **Product Details Page:** View comprehensive product information, including an interactive image gallery.
 
-Shopping Cart: Add, update quantities, and remove items from your cart.
+    * **Dynamic Image Gallery:** Clickable thumbnails to switch the main product image.
 
-User Authentication:
+* **Shopping Cart:** Add, update quantities, and remove items from your cart.
 
-User Registration: Create new accounts.
+* **User Authentication:**
 
-User Login: Securely log in to access personalized features.
+    * **User Registration:** Create new accounts.
 
-Conditional Header UI: Automatically switches between "Sign In" and "Log Out" options based on user authentication status.
+    * **User Login:** Securely log in to access personalized features.
 
-User Profile Page: View and potentially update user information.
+    * **Conditional Header UI:** Automatically switches between "Sign In" and "Log Out" options based on user authentication status.
 
-Automatic redirection for logged-in users from login/register pages.
+    * **User Profile Page:** View and potentially update user information.
 
-Responsive Design: Optimized for various screen sizes (desktop, tablet, mobile).
+    * Automatic redirection for logged-in users from login/register pages.
 
-Modern UI: Clean and attractive design using Tailwind CSS, featuring a subtle gradient background for an enhanced visual experience.
+* **Responsive Design:** Optimized for various screen sizes (desktop, tablet, mobile).
 
-🚀 Technologies Used
+* **Modern UI:** Clean and attractive design using Tailwind CSS, featuring a subtle gradient background for an enhanced visual experience.
+
+## 🚀 Technologies Used
+
 This project is built with a MERN stack (MongoDB, Express.js, React, Node.js) along with other powerful libraries.
 
-Frontend:
+**Frontend:**
 
-React: A JavaScript library for building user interfaces.
+* **React:** A JavaScript library for building user interfaces.
 
-React Router DOM: For declarative routing in React applications.
+* **React Router DOM:** For declarative routing in React applications.
 
-Axios: Promise-based HTTP client for making API requests.
+* **Axios:** Promise-based HTTP client for making API requests.
 
-Tailwind CSS: A utility-first CSS framework for rapid UI development.
+* **Tailwind CSS:** A utility-first CSS framework for rapid UI development.
 
-Font Awesome: For scalable vector icons.
+* **Font Awesome:** For scalable vector icons.
 
-Vite: A fast build tool for modern web projects.
+* **Vite:** A fast build tool for modern web projects.
 
-Backend:
+**Backend:**
 
-Node.js: JavaScript runtime environment.
+* **Node.js:** JavaScript runtime environment.
 
-Express.js: Web framework for Node.js.
+* **Express.js:** Web framework for Node.js.
 
-MongoDB: NoSQL database for storing application data.
+* **MongoDB:** NoSQL database for storing application data.
 
-Mongoose: ODM (Object Data Modeling) library for MongoDB and Node.js.
+* **Mongoose:** ODM (Object Data Modeling) library for MongoDB and Node.js.
 
-JSON Web Tokens (JWT): For secure user authentication.
+* **JSON Web Tokens (JWT):** For secure user authentication.
 
-Bcrypt.js: For password hashing.
+* **Bcrypt.js:** For password hashing.
 
-Dotenv: For loading environment variables.
+* **Dotenv:** For loading environment variables.
 
-Nodemon: For automatically restarting the Node.js server during development.
+* **Nodemon:** For automatically restarting the Node.js server during development.
 
-📦 Getting Started
+## 📦 Getting Started
+
 Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
 
-Prerequisites
+### Prerequisites
+
 Before you begin, ensure you have the following installed:
 
-Node.js (LTS version recommended)
+* **Node.js** (LTS version recommended)
 
-pnpm (preferred package manager) or npm/yarn
+* **pnpm** (preferred package manager) or npm/yarn
 
-To install pnpm: npm install -g pnpm
+    * To install pnpm: `npm install -g pnpm`
 
-MongoDB: Running locally or access to a MongoDB Atlas cluster.
+* **MongoDB:** Running locally or access to a MongoDB Atlas cluster.
 
-Installation
-Clone the repository:
+### Installation
 
-git clone <repository_url>
-cd Ecommerce-platform
+1.  **Clone the repository:**
 
-
-Backend Setup:
-Navigate into the server directory and install dependencies:
-
-cd server
-pnpm install
+    ```
+    git clone <repository_url>
+    cd Ecommerce-platform
 
 
-Create a .env file in the server directory and add your environment variables:
+    ```
 
-MONGO_URI=mongodb://127.0.0.1:27017/shopnexus # Or your MongoDB Atlas URI
-JWT_SECRET=your_jwt_secret_key
-NODE_ENV=development
-PORT=5000
+2.  **Backend Setup:**
+    Navigate into the `server` directory and install dependencies:
 
-
-Frontend Setup:
-Navigate into the client directory and install dependencies:
-
-cd ../client
-pnpm install
+    ```
+    cd server
+    pnpm install
 
 
-Running the Application
-Start the Backend Server:
-From the server directory:
+    ```
 
-pnpm dev
+    Create a `.env` file in the `server` directory and add your environment variables:
 
-
-The server will start on http://localhost:5000.
-
-Start the Frontend Development Server:
-From the client directory:
-
-pnpm dev
+    ```
+    MONGO_URI=mongodb://127.0.0.1:27017/JengoMart # Or your MongoDB Atlas URI
+    JWT_SECRET=your_jwt_secret_key
+    NODE_ENV=development
+    PORT=5000
 
 
-The frontend application will typically open in your browser at http://localhost:5173 (Vite's default port).
+    ```
 
-The frontend is configured to proxy API requests to the backend, so axios.get('/api/products') will correctly hit your Node.js server.
+3.  **Frontend Setup:**
+    Navigate into the `client` directory and install dependencies:
 
-💡 Usage
-Browse Products: Navigate to /products to see all available items.
-
-View Product Details: Click on any product to see its detailed page, including the image gallery.
-
-Add to Cart: Select quantity and add products to your shopping cart.
-
-Register/Login:
-
-Click "Sign In" in the header to go to the login page.
-
-If you don't have an account, click "Register" to create one.
-
-Once logged in, the "Sign In" button will change to your username (or "Profile") with a dropdown for "Profile" and "Log Out".
-
-View Cart: Click "Cart" in the header to review your selected items.
-
-User Profile: Click on your username/profile in the header to view your profile details.
-
-📁 Project Structure
-Ecommerce-platform/
-├── client/                 # Frontend (React) application
-│   ├── public/             # Static assets (index.html, favicon, etc.)
-│   ├── src/
-│   │   ├── assets/         # Images, fonts, etc.
-│   │   ├── components/     # Reusable UI components (Header, Footer, ProductImageGallery, etc.)
-│   │   ├── context/        # React Contexts (AuthContext, CartContext)
-│   │   ├── pages/          # Main application pages (HomePage, ProductPage, LoginPage, etc.)
-│   │   ├── App.jsx         # Main React application component
-│   │   ├── main.jsx        # Entry point for React app
-│   │   └── index.css       # Global CSS (Tailwind imports)
-│   ├── tailwind.config.js
-│   ├── vite.config.js
-│   └── package.json
-├── server/                 # Backend (Node.js/Express) application
-│   ├── config/             # Database connection setup
-│   ├── controllers/        # Logic for handling API requests
-│   ├── middleware/         # Express middleware (e.g., authentication)
-│   ├── models/             # Mongoose schemas for MongoDB
-│   ├── routes/             # API routes definitions
-│   ├── .env                # Environment variables
-│   ├── server.js           # Main server file
-│   └── package.json
-└── README.md               # This file
+    ```
+    cd ../client
+    pnpm install
 
 
-💡 Future Enhancements
-Product Variants: Implement options for products (e.g., size, color) that affect price and stock.
+    ```
 
-Advanced Search & Filtering: Add more robust search capabilities and filtering options (by category, price range, brand, etc.).
+### Running the Application
 
-Product Reviews & Ratings: Allow users to leave reviews and ratings for products.
+1.  **Start the Backend Server:**
+    From the `server` directory:
 
-Checkout Process: Implement full checkout flow (shipping address, payment integration).
+    ```
+    pnpm dev
 
-Order History: Allow logged-in users to view their past orders.
 
-Admin Dashboard: A dedicated interface for managing products, orders, and users.
+    ```
 
-Image Uploads: Implement functionality for admins to upload product images.
+    The server will start on `http://localhost:5000`.
 
-User Profile Updates: Enable users to update their personal information from the profile page.
+2.  **Start the Frontend Development Server:**
+    From the `client` directory:
 
-🤝 Contributing
-Contributions are welcome! If you have suggestions or want to contribute, please feel free to open an issue or submit a pull request.
+    ```
+    pnpm dev
 
-📄 License
-This project is licensed under the MIT License - see the LICENSE file for details (if you have one, otherwise remove this line).
 
-📧 Contact
-For any inquiries or feedback, please reach out to 
-Moses Jengo ,  mosesjengo2@gmail.com
+    ```
+
+    The frontend application will typically open in your browser at `http://localhost:5173` (Vite's default port).
+
+The frontend is configured to proxy API requests to the backend, so `axios.get('/api/products')` will correctly hit your Node.js server.
+
+## 💡 Usage
+
+1.  **Browse Products:** Navigate to `/products` to see all available items.
+
+2.  **View Product Details:** Click on any product to see its detailed page, including the image gallery.
+
+3.  **Add to Cart:** Select quantity and add products to your shopping cart.
+
+4.  **Register/Login:**
+
+    * Click "Sign In" in the header to go to the login page.
+
+    * If you don't have an account, click "Register" to create one.
+
+    * Once logged in, the "Sign In" button will change to your username (or "Profile") with a dropdown for "Profile" and "Log Out".
+
+5.  **View Cart:** Click "Cart" in the header to review your selected items.
+
+6.  **User Profile:** Click on your username/profile in the header to view your profile details.
+
+## 📁 Project Structure
