@@ -1,0 +1,88 @@
+/* client/src/components/ProductImageGallery.css */
+
+.product-image-gallery {
+  display: flex;
+  flex-direction: column; /* Main image on top, thumbnails below */
+  align-items: center; /* Center items horizontally */
+  gap: 15px; /* Space between main image and thumbnails */
+  width: 100%; /* Or a specific width */
+  max-width: 700px; /* Max width for the entire gallery */
+  margin: 0 auto; /* Center the gallery on the page */
+}
+
+.main-image-container {
+  width: 100%;
+  border: 1px solid #ddd; /* Light border for the main image */
+  border-radius: 8px;
+  overflow: hidden; /* Ensures image corners are rounded */
+  display: flex; /* To center the image if it's smaller than container */
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9; /* Background for placeholder */
+}
+
+.main-product-image {
+  width: 100%;
+  height: auto;
+  display: block; /* Removes extra space below image */
+  max-height: 500px; /* Optional: cap max height for large images */
+  object-fit: contain; /* Ensures the whole image fits without cropping */
+}
+
+.thumbnail-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow thumbnails to wrap to next line */
+  justify-content: center; /* Center thumbnails */
+  gap: 10px; /* Space between thumbnails */
+  width: 100%;
+  padding: 5px;
+  background-color: #f0f0f0; /* Light background for thumbnail section */
+  border-radius: 8px;
+}
+
+.thumbnail-image {
+  width: 80px; /* Fixed width for thumbnails */
+  height: 80px; /* Fixed height for thumbnails */
+  object-fit: cover; /* Crop to fit, filling the space */
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.thumbnail-image:hover {
+  border-color: #007bff; /* Highlight on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+.thumbnail-image.active {
+  border-color: #007bff; /* Active thumbnail has a distinct border */
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5); /* A bit more emphasis */
+}
+
+/* Optional: Adjust for larger screens, e.g., display thumbnails to the side */
+@media (min-width: 768px) {
+  .product-image-gallery {
+    flex-direction: row; /* Main image on left, thumbnails on right */
+    align-items: flex-start; /* Align to top */
+    gap: 20px;
+  }
+
+  .main-image-container {
+    flex: 3; /* Main image takes more space */
+    max-width: none; /* Remove max-width from main container for flex growth */
+  }
+
+  .thumbnail-container {
+    flex: 1; /* Thumbnails take less space */
+    flex-direction: column; /* Stack thumbnails vertically */
+    justify-content: flex-start;
+    padding: 0;
+    background-color: transparent; /* No background when stacked vertically */
+  }
+
+  .thumbnail-image {
+    width: 100px; /* Slightly larger thumbnails for desktop */
+    height: 100px;
+  }
+}
